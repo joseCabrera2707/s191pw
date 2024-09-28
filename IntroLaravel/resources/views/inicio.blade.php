@@ -20,7 +20,7 @@
         <p>Presiona el botón para iniciar....</p>
 
         <a href="/form" class="btn btn-primary"> Ir al Registro </a>
-        <a href="{{ route('rutaconsulta')}}" class="btn btn-primary"> Ir al Registro </a>
+        <a href="{{ route('rutaconsulta')}}" class="btn btn-danger"> Ir al Registro </a>
         
 
       
