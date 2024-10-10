@@ -6,19 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Card extends Component
+class Alert extends Component
 {
-    public $encabezado;
-    public $titulo;
-    public $textoBoton;
     /**
      * Create a new component instance.
      */
-    public function __construct($encabezado,$titulo,$textoBoton)
+    public function __construct()
     {
-        $this->encabezado = $encabezado;
-        $this->titulo = $titulo;
-        $this->textoBoton = $textoBoton;
+        //
     }
 
     /**
@@ -26,6 +21,6 @@ class Card extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.card');
+        return view('components.alert');
     }
 }
