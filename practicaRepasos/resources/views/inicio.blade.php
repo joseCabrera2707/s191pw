@@ -27,6 +27,7 @@
                     <strong>Materia:</strong> Programación Web<br>
                     <strong>Teléfono:</strong> 4423300114
                 </p>
+                <a href="{{route('repaso1')}}" class="btn btn-primary">Repaso 1</a>
             </div>
         </div>
 
