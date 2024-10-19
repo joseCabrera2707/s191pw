@@ -6,6 +6,6 @@
     <title>Repaso 1</title>
 </head>
 <body>
-    <h1>Esta es la Vista Repaso1 donde irá el convertidor</h1>
+    <x-formulario></x-formulario>
 </body>
 </html>

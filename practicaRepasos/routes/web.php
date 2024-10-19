@@ -11,3 +11,4 @@ Route::get('/', function () {
  /* Rutas para el controlador */
  Route::get('/',[ControladorVista::class,'home'])->name('rutainicio');
  Route::get('/repaso1',[ControladorVista::class,'vistaconvertidor'])->name('repaso1');
+ Route::post('/convertir',[ControladorVista::class,'generarconversion'])->name('convertir');
