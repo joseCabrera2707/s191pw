@@ -19,12 +19,26 @@ class controladorVistas extends Controller
     }
 
     public function procesarCliente(Request $peticion){
-        //respuesta a la petición 
         
-        /* return $peticion->path();
-        return $peticion->ip();
-        return $peticion->url(); */
-        return $peticion->all();
+        
+        // redirecion usando la ruta
+        //return redirect('/');
+
+        // redirecion usando el nombre de la ruta
+        //return redirect()->route('rutaconsulta');
+
+        //redirecciona al origen de la petición
+        //return back();
+
+        //Redirecciona con valores adjuntos (variables,arreglos etc ...)
+      /*   $id= [['usuario'=>'1'],['usuario'=>'2']];
+        return view('formulario',compact('id')); */
+
+        //redirección enviando msj en session
+        $usuario = $peticion->input('txtnombre');
+        session()->flash('exito','se guardo el usuario: '.$usuario);
+
+        return to_route('rutacacas');
     }
 }
 

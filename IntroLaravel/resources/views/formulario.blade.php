@@ -4,6 +4,23 @@
   @section('contenido')
 
 <div class="container mt-5 col-md-6">
+{{--@dump($id) --}}
+
+
+@if(session('exito'))
+<x-alert tipo="success">{{session('exito')}}</x-alert>
+@endif
+
+@session('exito')
+<script>
+  Swal.fire({
+  title: "Respuesta del servidor",
+  text:'{{$value}}',
+  icon: "success"
+  });
+
+</script>
+@endsession
 
 <div class="card font-monospace">
   <div class="card-header fs-5 text-center text-primary">
