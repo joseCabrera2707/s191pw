@@ -37,18 +37,19 @@
     <div class="mb-3">
         <label for="Apellido" class="form-label">Apellido: </label>
         <input type="text" class="form-control" name="txtapellido" value="{{old('txtapellido')}}">
-        <small> {{ $errors->first('txtapellido' )}}</small>
+        <small class='text-danger fst-italic'> {{ $errors->first('txtapellido' )}}</small>
     </div>
     <div class="mb-3">
         <label for="correo" class="form-label">Correo: </label>
         <input type="text" class="form-control" name="txtcorreo" value="{{old('txtcorreo')}}">
-        <small> {{ $errors->first('txtcorreo' )}}</small>
+        <small class='text-danger fst-italic'> {{ $errors->first('txtcorreo' )}}</small>
     </div>
     <div class="mb-3">
         <label for="telefono" class="form-label">Telefono: </label>
         <input type="text" class="form-control" name="txttelefono" value="{{old('txttelefono')}}">
-        <small> {{ $errors->first('txttelefono' )}}</small>
+        <small class='text-danger fst-italic'> {{ $errors->first('txttelefono' )}}</small>
     </div>
+    
 
     <div class="card-footer text-muted">
       <div class="d-grid gap-2 mt-2 mb-1">
