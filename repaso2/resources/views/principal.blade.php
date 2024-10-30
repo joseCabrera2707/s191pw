@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite(['resources/js/app.js'])
-    <title>Página principal</title>
-</head>
-<body>
-</html>
+@extends('layouts.plantilla')
+
+@section('titulo','Principal')
+@section('contenido')
+<h1>principal</h1>
+@endsection
