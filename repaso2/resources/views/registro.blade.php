@@ -6,6 +6,15 @@
 @vite(['resources\css\registro.css'])
 
 <div class="formulario-container container mt-5">
+@if(session('exito'))
+    <script>
+        Swal.fire({
+            title: "Guardado Correctamente",
+            text: '{{ session('exito') }}',  
+            icon: "success"
+        });
+    </script>
+@endif
     <h2>Registro de libros</h2>
     <form method = "POST" action="/enviarlibro">
         @csrf

@@ -16,7 +16,8 @@ class ControladorVista extends Controller
         return view('registro');
     }
     public function ProcesarLibro(validadorLibro $peticion){
-        $usuario = $peticion->input('isbn');
-        return to_route('rutacacas');
+        $libro = $peticion->input('titulo');
+        session()->flash('exito', 'Todo correcto. Libro: ' . $libro . ' guardado');
+        return to_route('rutaregistro');
     }
 }
