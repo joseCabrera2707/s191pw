@@ -24,8 +24,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="{{ route('rutaprincipal')}}">Home</a>
-        <a class="nav-link" href="{{ route('rutaregistro')}}">Registro</a>
+        <a class="nav-link {{request()->routeis('rutaprincipal')?"text-success":""}}" aria-current="page" href="{{ route('rutaprincipal')}}">Home</a>
+        <a class="nav-link {{request()->routeis('rutaregistro')?"text-success":""}}" href="{{ route('rutaregistro')}}">Registro</a>
       </div>
     </div>
   </div>

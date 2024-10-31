@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\validadorLibro;
 
 class ControladorVista extends Controller
 {
@@ -14,6 +15,8 @@ class ControladorVista extends Controller
     public function RegistroLibros(){
         return view('registro');
     }
-
-
+    public function ProcesarLibro(validadorLibro $peticion){
+        $usuario = $peticion->input('isbn');
+        return to_route('rutacacas');
+    }
 }
