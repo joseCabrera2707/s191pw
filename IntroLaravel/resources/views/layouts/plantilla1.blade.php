@@ -24,10 +24,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link {{request()->routeis('rutacacas')?"text-warning":""}}" aria-current="page" href="{{ route('rutacacas')}}">Registro Clientes</a>
+          <a class="nav-link {{request()->routeis('rutacacas')?"text-warning":""}}" aria-current="page" href="{{ route('rutacacas')}}">{{__('Registro Clientes')}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{request()->routeis('rutaconsulta')?"text-success":""}}" href="{{ route('rutaconsulta')}}">Consultar Clientes</a>
+          <a class="nav-link {{request()->routeis('rutaconsulta')?"text-success":""}}" href="{{ route('rutaconsulta')}}">{{__('Consultar Clientes')}}</a>
         </li>
       </ul>
     </div>
