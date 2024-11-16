@@ -12,9 +12,15 @@ class clienteController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    public function home(){
+        return view('inicio');
+    }
+
     public function index()
     {
-        //
+        $consultaClientes = DB::table('cliente')->get();
+        return view('clientes',compact('consultaClientes'));
     }
 
     /**
