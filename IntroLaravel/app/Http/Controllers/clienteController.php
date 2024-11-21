@@ -65,15 +65,27 @@ class clienteController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $consultaClientes = DB::table('cliente')->where('id', $id)->first();
+        //Mostramos el formulario para editar y mandamos los resultados de la consulta
+        return view('formularioeditar',compact('consultaClientes'));
+        
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ValidadorCliente $request, string $id)
     {
         //
+        $consultaCliente = DB::table('cliente')
+        ->where('id', $id)
+        ->update([
+            "nombre"=>$request->input('txtnombre'),
+            "apellido"=>$request->input('txtapellido'),
+            "correo"=>$request->input('txtcorreo'),
+            "telefono"=>$request->input('txttelefono'),
+            "updated_at"=>Carbon::now(),
+        ]);
     }
 
     /**

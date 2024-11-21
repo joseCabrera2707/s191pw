@@ -30,3 +30,4 @@ Route::get('/cliente/create',[clienteController::class,'create'])->name('rutacac
 Route::post('/cliente',[clienteController::class,'store'])->name('rutaenvia');
 
 Route::get('/consultar',[clienteController::class,'index'])->name('rutaconsulta');
+Route::get('/cliente/{id}/update',[clienteController::class,'edit'])->name('rutaeditar');
