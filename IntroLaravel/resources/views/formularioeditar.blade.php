@@ -11,27 +11,19 @@
 <x-alert tipo="success">{{session('exito')}}</x-alert>
 @endif
 
-@session('exito')
-<script>
-  Swal.fire({
-  title: "Respuesta del servidor",
-  text:'{{$value}}',
-  icon: "success"
-  });
 
-</script>
-@endsession
 
 <div class="card font-monospace">
   <div class="card-header fs-5 text-center text-primary">
      {{__('Editar Clientes')}}
  </div>
  <div class="card-body text-justify">
-  <form method="POST" action="{{route('rutaenvia')}}">
+  <form method="POST" action="{{route('rutaupdate',$consultaClientes->id)}}">
       @csrf
+      @method('PUT')
       <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" name="nombre" id="nombre" class="form-control" value="{{ $consultaClientes->nombre }}" >
+            <input type="text" name="txtnombre" id="nombre" class="form-control" value="{{ $consultaClientes->nombre }}" >
             <small class='text-danger fst-italic'> {{ $errors->first('txtnombre' )}}</small>
     </div>
     <div class="mb-3">

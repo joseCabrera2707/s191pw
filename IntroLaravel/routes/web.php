@@ -28,6 +28,9 @@ Route::view('/component','componentes')->name('rutacomponent');
 Route::get('/',[clienteController::class,'home'])->name('rutainicio');
 Route::get('/cliente/create',[clienteController::class,'create'])->name('rutacacas');
 Route::post('/cliente',[clienteController::class,'store'])->name('rutaenvia');
-
 Route::get('/consultar',[clienteController::class,'index'])->name('rutaconsulta');
-Route::get('/cliente/{id}/update',[clienteController::class,'edit'])->name('rutaeditar');
+Route::get('/cliente/{id}/edit', [ClienteController::class, 'edit'])->name('rutaeditar');
+
+Route::put('/cliente/{id}/update', [ClienteController::class, 'update'])->name('rutaupdate');
+
+Route::delete('/cliente/{id}/{nombre}', [ClienteController::class, 'destroy'])->name('rutaborrar');

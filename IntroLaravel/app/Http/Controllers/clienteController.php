@@ -47,7 +47,7 @@ class clienteController extends Controller
         ]);
          //redirección enviando msj en session
          $usuario = $request->input('txtnombre');
-         session()->flash('exito','se guardo el usuario: '.$usuario);
+         session()->flash('exito','se editó el usuario: '.$usuario);
  
          return to_route('rutacacas');
     }
@@ -86,13 +86,23 @@ class clienteController extends Controller
             "telefono"=>$request->input('txttelefono'),
             "updated_at"=>Carbon::now(),
         ]);
+
+        $usuario = $request->input('txtnombre');
+        session()->flash('exito','se editó el usuario: '.$usuario);
+        return to_route('rutaconsulta');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id, string $nombre)
     {
         //
+        $consultaCliente = DB::table('cliente')
+            ->where('id',$id)
+            ->delete();
+
+        session()->flash('delete','Se eliminó el usuario '.$nombre);
+        return to_route('rutaconsulta');
     }
 }
