@@ -33,7 +33,7 @@
 <script>
     function confirmarEliminacion(id) {
         Swal.fire({
-            title: '¿Estás seguro?',
+            title: '¿Estás seguro de eliminar?',
             text: "¡Esta acción no se puede deshacer!",
             icon: 'warning',
             showCancelButton: true,
